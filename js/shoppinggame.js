@@ -22,9 +22,33 @@ var player = {
 };
 
 // Define the Product class - write the Constructor function for Product class here
-
+function Product(id, name, price, expiryDate) {
+   this.id = id;
+   this.name = name;
+   this.price = price;
+   this.expiryDate = expiryDate;
+  }
 // Complete the dateDiff function
-const dateDiff = (date1, date2) => {};
+const dateDiff = (date1, date2) => {
+    var diff = {};
+    // Number of Millisecondes betwen date2 & date1
+    var tmp = date2 - date1;
+    tmp = Math.floor(tmp/1000);
+    diff.sec = tmp % 60;
+
+    tmp = Math.floor((tmp-diff.sec)/60);
+    diff.min = tmp % 60;
+
+    tmp = Math.floor((tmp-diff.min)/60);
+    diff.hour = tmp % 24;
+
+    tmp = Math.floor((tmp-diff.hour)/24);
+    diff.day = tmp;
+
+    return diff;
+    
+
+};
 
 // Here, use Object.defineProperty to create property - daysToExpire
 
