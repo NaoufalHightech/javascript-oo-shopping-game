@@ -46,12 +46,13 @@ const dateDiff = (date1, date2) => {
     diff.day = tmp;
 
     return diff;
-    
-
 };
 
 // Here, use Object.defineProperty to create property - daysToExpire
-
+Object.defineProperty(Product, 'daysToExpire',{
+get() {
+    return this.daysToExpire;
+  }});
 // Add method getDetails to Product here
 
 // Define the MagicProduct class here
