@@ -250,12 +250,11 @@ describe('Shopping Master game - Define object-types/classes', function () {
 
     describe("Call dateDiff() function inside the getter of daysToExpire property of Product", () => {
 
-        it('Should call and return the dateDiff function in the getter of daysToExpire. @dateDiff-in-get', function () {
+        xit('Should call and return the dateDiff function in the getter of daysToExpire. @dateDiff-in-get', function () {
 
             test.assert(shoppinggame.Product, "Have you defined a `Product` object type?");
 
             const pr = new shoppinggame.Product(1, 'test', 100, oneYearLater);
-
             const thisUsed = (daysToExpireCall && daysToExpireCall.argument.arguments[0].object &&
                 daysToExpireCall.argument.arguments[0].object.type === "ThisExpression") ? true : false;
             const newUsed = (daysToExpireCall && daysToExpireCall.argument.arguments[1].type === "NewExpression") ? true : false;
